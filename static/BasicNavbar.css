@@ -16,6 +16,7 @@ header{
     position: sticky;
     background: rgba(34,67,140,1);
     transition: background 0.4s ease-in-out;
+    z-index: 9;
 }
 header.scrolled{
     background: #22438C;
@@ -73,7 +74,7 @@ header.scrolled{
     height: auto;
     background-color:#112C66;
     position: absolute;
-    z-index:5;
+    z-index:10;
     display: none;
     border: #22438C;
 }
@@ -109,7 +110,7 @@ header.scrolled{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 10;
     background: #112C66;
     transform: translateX(100vw);
     transition: transform 0.7s ease-in-out;
@@ -146,7 +147,7 @@ header.scrolled{
     font-weight: 500;
 }
 .mobile-nav__link:hover {
-    background: rgba(43, 116, 112, 0.5);
+    background: rgba(255, 255, 255, 0.05);
     text-decoration: none !important;
     color: white;
 }
