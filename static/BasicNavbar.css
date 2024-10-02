@@ -1,5 +1,290 @@
 @charset "UTF-8";
-
-body,html{
-    background-color: white;
+*{
+    padding:0;
+    margin:0;
 }
+body{
+    background-color: white;
+    overflow-x: hidden;
+}
+.main-content {
+    transition: none;
+}
+/*Base css for default-nav*/
+header{
+    display: flex;
+    height: auto;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background: rgba(34,67,140,1);
+    transition: background 0.4s ease-in-out;
+}
+header.scrolled{
+    background: #22438C;
+    opacity: 0.96;
+}
+.default-nav{
+    display: flex;
+    margin:0;
+    /*font-family: "Assistant", sans-serif;*/
+    height: auto;
+    width: 100%;
+}
+.default-nav-links{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+.default-nav-links li.nav-logo{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin-left: 15vw;
+}
+.default-nav ul{
+    list-style: none;
+    margin-right: 20vw;
+}
+.default-nav ul li {
+    display: inline-block;
+    position: relative;
+}
+.default-nav li.nav-logo a{
+    display: block;
+}
+.default-nav li.nav-logo img{
+    height: 10vw;
+    width:auto;
+    display: inline-block;
+}
+.default-nav ul li a{
+    display: block;
+    padding: 5px 25px;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.7vw;
+}
+.default-nav ul li ul.dropdown li{
+    display: block;
+    text-align: center;
+}
+.default-nav ul li ul.dropdown{
+    width: 100%;
+    height: auto;
+    background-color:#112C66;
+    position: absolute;
+    z-index:5;
+    display: none;
+    border: #22438C;
+}
+.default-nav ul li a:hover{
+    background: #112C66;
+}
+.default-nav ul li ul.dropdown a:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+.default-nav ul li.nav-logo a:hover{
+    background: none;
+}
+.default-nav ul li:hover ul.dropdown{
+    display: block;
+}
+.mobile-nav-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: flex-end;
+}
+/*Base css for mobile-nav*/
+.mobile-nav-open .mobile-nav {
+    transform: translateX(30vw);
+}
+.mobile-nav {
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background: #112C66;
+    transform: translateX(100vw);
+    transition: transform 0.7s ease-in-out;
+    overflow: hidden;
+}
+.mobile-nav-close {
+    background: none;
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 15px 25px;
+    color: #dddddd;
+    margin-right: auto;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15);
+}
+.mobile-nav-close:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+.mobile-nav-links-container {
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.15);
+}
+.mobile-nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #dddddd;
+}
+.mobile-nav__text {
+    font-size: 22px;
+    /*font-family: "Assistant", sans-serif;*/
+    font-weight: 500;
+}
+.mobile-nav__link:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@media only screen and (min-width:1200px) {
+    .default-nav-links li.nav-logo{
+        margin-left: 20%;
+        margin-right: 2vw;
+    }
+    .default-nav ul{
+        margin-right: 22%;
+    }
+    .default-nav li.nav-logo img{
+        height: 9vh;
+    }
+    .default-nav li.nav-logo a{
+        padding: 8px 15px;
+    }
+    .default-nav ul li a{
+        padding: 15px 15px;
+        font-size: 0.70vw;
+        letter-spacing: 1px;
+    }
+    .mobile-nav{
+        display: none;
+    }
+    .default-nav button {
+        display: none;
+    }
+}
+/*Desktops and Laptops*/
+@media only screen and (min-width:993px) and (max-width: 1199px){
+    .default-nav-links li.nav-logo{
+        margin-left: 20%;
+        margin-right: 2vw;
+    }
+    .default-nav ul{
+        margin-right: 15%;
+    }
+    .default-nav li.nav-logo img{
+        height: 6.5vh;
+    }
+    .default-nav li.nav-logo a{
+        padding: 8px 15px;
+    }
+    .default-nav ul li a{
+        padding: 15px 15px;
+        font-size: 0.9vw;
+    }
+    .mobile-nav{
+        display: flex;
+    }
+    .default-nav button {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px){
+    .default-nav-links li.nav-logo{
+        margin-left: 15%;
+        margin-right: 2vw;
+    }
+    .default-nav ul{
+        margin-right: 10%;
+    }
+    .default-nav li.nav-logo img{
+        height: 7vh;
+    }
+    .default-nav li.nav-logo a{
+        padding: 5px 15px;
+    }
+    .default-nav ul li a{
+        padding: 15px 15px;
+        font-size: 1.4vw;
+    }
+    .mobile-nav{
+        display: none;
+    }
+    .default-nav button {
+        display: none;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 768px){
+    .default-nav-links li.nav-logo{
+        margin-left: 15%;
+        margin-right: 0;
+    }
+    .default-nav ul{
+        margin-right: 5%;
+    }
+    .default-nav li.nav-logo img{
+        height: 7vh;
+    }
+    .default-nav li.nav-logo a{
+        padding: 5px 15px;
+    }
+    .default-nav ul li a{
+        padding: 10px 15px;
+        font-size: 1.4vw;
+    }
+    .mobile-nav{
+        display: none;
+    }
+    .default-nav button {
+        display: none;
+    }
+}
+/*Mobile Devices */
+@media only screen and (max-width: 600px){
+    .default-nav{
+        justify-content: flex-end;
+    }
+    .mobile-nav-button {
+        display: flex;
+        margin-right: 5vw;
+    }
+    .default-nav ul li{
+        display: none;
+    }
+    .default-nav-links li.nav-logo{
+        margin-left: 20%;
+    }
+    .default-nav li.nav-logo a{
+        padding: 5px 10px;
+    }
+    .default-nav li.nav-logo img{
+        height: 7vh;
+    }
+    .mobile-nav-close {
+        height: 8.5vh;
+    }
+    .mobile-nav-open .mobile-nav {
+        transform: translateX(40vw);
+    }
+    .mobile-nav {
+        width: 60vw;
+    }
+}
+

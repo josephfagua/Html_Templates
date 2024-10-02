@@ -9,14 +9,85 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <button class="nav-close"></button>
-    </nav>
-    <main class="main">
-        content goes here
+    <header>
+        <nav class="default-nav">
+            <ul class="default-nav-links">
+                <li class="nav-logo">
+                    <a href="">
+                        <img  src="{{ url_for('static',filename='example_logo/LOGO-MSC-167666.png') }}" alt="nav_Logo">
+                    </a>
+                </li>
+                <li class="link"><a href="">HOME</a></li>
+                <li>
+                    <a href="">ABOUT &#9662;</a>
+                    <ul class="dropdown" >
+                        <li><a href="">Company Statistics</a></li>
+                    </ul>
+                </li>
+                <li class="link">
+                    <a href="">SERVICES &#9662;</a>
+                    <ul class="dropdown" >
+                        <li><a href="">Item</a></li>
+                        <li><a href="">Item</a></li>
+                        <li><a href="">Item</a></li>
+                        <li><a href="">Item</a></li>
+                    </ul>
+                </li>
+                <li class="link">
+                    <a href="">PROJECTS &#9662;</a>
+                    <ul class="dropdown" >
+                        <li><a href="">Item</a></li>
+                    </ul>
+                </li>
+                <li class="link"><a href="">CONTACT</a></li>
+            </ul>
+            <button class="mobile-nav-button" onclick="toggleNav()"><ion-icon name="menu-outline" size="large"></ion-icon></button>
+        </nav>
+        <nav class="mobile-nav">
+            <button type="button" class="mobile-nav-close" onclick="toggleNav()">
+                <ion-icon name="close-outline" size="large"></ion-icon>
+            </button>
+            <div class="mobile-nav-links-container">
+                <a href="#" class="mobile-nav__link">
+                    <span class="mobile-nav__text">HOME</span>
+                    <ion-icon name="cube-outline" size="large"></ion-icon>
+                </a>
+                <a href="#" class="mobile-nav__link">
+                    <span class="mobile-nav__text">ABOUT</span>
+                    <ion-icon name="location-outline" size="large"></ion-icon>
+                </a>
+                <a href="#" class="mobile-nav__link">
+                    <span class="mobile-nav__text">SERVICES</span>
+                    <ion-icon name="settings-outline" size="large"></ion-icon>
+                </a>
+                <a href="#" class="mobile-nav__link">
+                    <span class="mobile-nav__text">PROJECTS</span>
+                    <ion-icon name="call-outline" size="large"></ion-icon>
+                </a>
+                <a href="#" class="mobile-nav__link">
+                    <span class="mobile-nav__text">CONTACT</span>
+                    <ion-icon name="call-outline" size="large"></ion-icon>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+
     </main>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>function toggleNav() {document.body.classList.toggle("mobile-nav-open");}</script>
+    <script>
+        document.addEventListener('scroll', () =>{
+            const header = document.querySelector('header');
+            if (window.scrollY >0){
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        })
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
