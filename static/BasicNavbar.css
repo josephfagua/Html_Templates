@@ -7,9 +7,6 @@ body{
     background-color: white;
     overflow-x: hidden;
 }
-.main-content {
-    transition: none;
-}
 /*Base css for default-nav*/
 header{
     display: flex;
