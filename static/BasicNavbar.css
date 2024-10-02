@@ -128,7 +128,6 @@ header.scrolled{
     margin-right: auto;
     width: 100%;
     cursor: pointer;
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15);
 }
 .mobile-nav-close:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -150,8 +149,11 @@ header.scrolled{
     font-weight: 500;
 }
 .mobile-nav__link:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(43, 116, 112, 0.5);
+    text-decoration: none !important;
+    color: white;
 }
+
 
 @media only screen and (min-width:1200px) {
     .default-nav-links li.nav-logo{
