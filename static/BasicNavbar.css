@@ -155,11 +155,11 @@ header.scrolled{
 
 @media only screen and (min-width:1200px) {
     .default-nav-links li.nav-logo{
-        margin-left: 15vw;
+        margin-left: 20%;
         margin-right: 2vw;
     }
     .default-nav ul{
-        margin-right: 10vw;
+        margin-right: 22%;
     }
     .default-nav li.nav-logo img{
         height: 9vh;
@@ -169,7 +169,7 @@ header.scrolled{
     }
     .default-nav ul li a{
         padding: 15px 15px;
-        font-size: 0.9vw;
+        font-size: 0.70vw;
         letter-spacing: 1px;
     }
     .mobile-nav{
