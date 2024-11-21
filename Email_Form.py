@@ -1,4 +1,4 @@
-from flask import render_template, Flask,url_for
+from flask import render_template, Flask,url_for, redirect
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
@@ -35,17 +35,17 @@ mail = Mail(app)
 #     cc=[],
 #     bcc=[],
 # )     This are some of the parameters the msg object can have for sending emails
-@app.route('/')
-def contact_form():
+@app.route('/', methods=['GET'])
+def index():
+    return render_template("ContactForm-1.html")
+
+
+@app.route('/contact', methods=[ 'POST'])
+def submit_form():
     msg = Message(f'Hey there,', recipients=['xoxarej981@angewy.com'])
     msg.body = 'This is a test email sent from Joseph\'s app.'
     mail.send(msg)
-    return 'Message has been sent!'
-    # return render_template("ContactForm-1.html")
-
-
-
-
+    return redirect(url_for("index"))
 
 if __name__ == '__main__':
     app.run()

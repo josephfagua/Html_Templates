@@ -1,0 +1,49 @@
+@charset "UTF-8";
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: white;
+    overflow-x: hidden;
+}
+.contact-section{
+    display: grid;
+    margin: 0 auto;
+    padding: 10vw 0;
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 75% 25%;
+}
+.contact-section-layout{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3,1fr);
+    background-color: white;
+    margin:0 15%;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.submit-button{
+    grid-area: submit;
+}
+/*Extra large devices*/
+@media only screen and (min-width:1200px) {
+
+}
+/*Desktops and Laptops*/
+@media only screen and (min-width:993px) and (max-width: 1199px){
+
+}
+@media only screen and (min-width: 769px) and (max-width: 992px){
+
+}
+@media only screen and (min-width: 601px) and (max-width: 768px){
+
+}
+/*Mobile Devices */
+@media only screen and (max-width: 600px){
+
+}
