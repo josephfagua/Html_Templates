@@ -252,7 +252,7 @@ footer{
     }
 }
 /* small and medium devices (portrait tablets/large phones and landscape tablets) */
-@media only screen and (min-width: 601px) and (max-width: 768px){
+@media only screen and (min-width: 481px) and (max-width: 768px){
     .mobile-footer-container{
         display: none;
     }
@@ -303,7 +303,7 @@ footer{
     }
 }
 /* Mobile Devices */
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 480px){
     .default-footer-container{
         display: none;
     }
