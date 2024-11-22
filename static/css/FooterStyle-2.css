@@ -1,0 +1,346 @@
+@charset "UTF-8";
+/*
+    This CSS stylesheet was created by the Crattivo Department of Gocreattivo.
+    It is designed to style FooterStyle-2.html template with a customizable logo positioned at the center.
+    Our team specializes in Full Stack Development, Database Management, API Integration,
+    Frontend & Backend Coordination, and Code Optimization.
+    Gocreattivo is dedicated to providing high-quality, efficient, and scalable design solutions.
+*/
+
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: white;
+    overflow-x: hidden;
+}
+
+/* Default Styling for Footer */
+footer{
+    display:flex;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    bottom: 0;
+    background: rgba(10,67,140,1); /*Change this color based on project design*/
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7vw;
+    font-family: "Inter", sans-serif;
+    p{
+        margin-bottom: 1vw;
+    }
+}
+.default-footer-container{
+    display: flex;
+    height: auto;
+    width: 70%;
+}
+.footer-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    text-align: left;
+}
+.footer-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0.5vw 0;
+    width: 30%;
+        svg{
+            display:flex;
+            width: auto;
+            height: 4.25vw;
+            margin-right: 50%;
+        }
+}
+.footer-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 33%;
+    text-align: right;
+    color: white;
+}
+.footer-links{
+    display: inline;
+    align-content: center;
+    justify-items: center;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1vw;
+    height: auto;
+}
+.footer-icon{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: 0 0 1vw 0.5vw;
+}
+/* Default Styling for Footer End */
+
+/* Mobile Styling for Footer */
+.mobile-footer-container{
+    display: none;
+    flex-direction: column;
+    height: 6vw;
+    width: 90%;
+}
+.footer-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+/* Mobile Styling for Footer End */
+
+/* Responsive sizing */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width:1200px) {
+    .mobile-footer-container{
+        display: none;
+    }
+    footer{
+        font-size: 0.7vw;
+        letter-spacing: 0.3px;
+        p{
+            margin-bottom: 0;
+        }
+    }
+    .footer-center{
+        width: 30%;
+        svg{
+            display:flex;
+            width: auto;
+            height: 4.25vw;
+            margin-right: 50%;
+        }
+    }
+    .footer-right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 30%;
+        text-align: right;
+        color: white;
+    }
+    .footer-links{
+        margin-bottom: 5vw;
+    }
+    .footer-icon{
+        height: 2vw;
+        margin: 0 0 0.5vw 0.5vw;
+    }
+}
+
+/*Desktops and large Laptops*/
+@media only screen and (min-width:993px) and (max-width: 1199px){
+    .mobile-footer-container{
+        display: none;
+    }
+    footer{
+        font-size: 0.7vw;
+        letter-spacing: 0.3px;
+        p{
+            margin-bottom: 0vw;
+        }
+    }
+    .default-footer-container{
+        display: flex;
+        height: auto;
+        width: 70%;
+    }
+    .footer-left{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40%;
+        text-align: left;
+    }
+    .footer-center{
+        width: 30%;
+        height: auto;
+        margin: 0.5vw 0;
+        svg{
+            display:flex;
+            width: auto;
+            height: 4.25vw;
+            margin-right: 50%;
+        }
+    }
+    .footer-right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 30%;
+        text-align: right;
+        color: white;
+    }
+    .footer-links{
+        margin-bottom: 5vw;
+    }
+    .footer-icon{
+        height: 2vw;
+        margin: 0 0 0.5vw 0.5vw;
+    }
+}
+/* small and medium laptops*/
+@media only screen and (min-width: 769px) and (max-width: 992px){
+    .mobile-footer-container{
+        display: none;
+    }
+    footer{
+        font-size: 0.9vw;
+        letter-spacing: 0.35px;
+        p{
+            margin-bottom: 0vw;
+        }
+    }
+    .default-footer-container{
+        display: flex;
+        height: auto;
+        width: 70%;
+    }
+    .footer-left{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40%;
+        text-align: left;
+    }
+
+    .footer-center{
+        width: 30%;
+        height: auto;
+        margin: 0.5vw 0;
+        svg{
+            display:flex;
+            width: auto;
+            height: 5vw;
+            margin-right: 50%;
+        }
+    }
+    .footer-right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 30%;
+        text-align: right;
+        color: white;
+    }
+    .footer-links{
+        margin-bottom: 5vw;
+    }
+    .footer-icon{
+        height: 2vw;
+        margin: 0 0 0.5vw 0.5vw;
+    }
+}
+/* small and medium devices (portrait tablets/large phones and landscape tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .mobile-footer-container{
+        display: none;
+    }
+    footer{
+        font-size: 1vw;
+        letter-spacing: 0.35px;
+        p{
+            margin-bottom: 0;
+        }
+    }
+    .default-footer-container{
+        display: flex;
+        height: auto;
+        width: 80%;
+    }
+    .footer-left{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40%;
+        text-align: left;
+    }
+
+    .footer-center{
+        width: 30%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5vw 0;
+        svg{
+            display:flex;
+            width: auto;
+            height: 6vw;
+            margin-right: 50%;
+        }
+    }
+    .footer-right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 30%;
+        text-align: right;
+        color: white;
+    }
+    .footer-icon{
+        height: 2vw;
+        margin: 0 0 0.5vw 0.5vw;
+    }
+}
+/* Mobile Devices */
+@media only screen and (max-width: 480px){
+    .default-footer-container{
+        display: none;
+    }
+    footer{
+        width: 100vw;
+        height: auto;
+        font-size: 1.9vw;
+        letter-spacing: 0.15px;
+        p{
+            margin-bottom: 0.5vw;
+        }
+    }
+    .mobile-footer-container{
+        display: flex;
+        height: auto;
+        width: 70%;
+        padding: 2vw 1vw 2vw 1vw;
+    }
+    .footer-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        padding: 1.5vw 0 1.5vw 0;
+    }
+    .footer-bottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 0 0 2vw 0 ;
+    }
+    .footer-icon{
+        height: 6vw;
+        margin: 0 0 1vw 0.5vw;
+    }
+}
