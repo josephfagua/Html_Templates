@@ -239,7 +239,7 @@ header.scrolled{
         display: none;
     }
 }
-@media only screen and (min-width: 601px) and (max-width: 768px){
+@media only screen and (min-width: 481px) and (max-width: 768px){
     .default-nav-links li.nav-logo{
         margin-left: 15%;
         margin-right: 0;
@@ -265,7 +265,7 @@ header.scrolled{
     }
 }
 /*Mobile Devices */
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 480px){
     .default-nav{
         justify-content: flex-end;
     }
