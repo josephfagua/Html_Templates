@@ -260,7 +260,7 @@ header.scrolled{
     .mobile-nav{
         display: none;
     }
-    .default-nav button {
+    .mobile-nav button {
         display: none;
     }
 }
@@ -293,6 +293,13 @@ header.scrolled{
     }
     .mobile-nav {
         width: 60vw;
+    }
+    .mobile-nav__link {
+        padding: 10px 25px;
+    }
+    .mobile-nav__text {
+        font-size: 14px;
+        letter-spacing: 0.8px;
     }
 }
 
