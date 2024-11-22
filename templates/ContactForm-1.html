@@ -5,9 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <title>Title</title>
+    <link rel="stylesheet"  href="{{ url_for('static',filename='css/ContactForm-1.css') }}">
 </head>
 <body>
+    <section id="contact" class="contact-section">
+        <div class="contact-section-layout">
+            <form id="contact-form" class="contact-section-form" action= "{{ url_for('submit_form') }}" method="POST">
+                <h1>Contact Us</h1>
+                <div class="contact-section-name">
+                    <input placeholder="Name" required>
+                </div>
+                <div class="contact-section-email">
+                    <input placeholder="Email" required>
+                </div>
+                <div class="contact-section-subject">
+                    <input placeholder="Subject" required>
+                </div>
+                <div class="contact-section-message">
+                    <textarea placeholder="Message" required></textarea>
+                </div>
+                <div class="submit-button">
+                    <input type="submit">
+                </div>
+            </form>
+            <section>
+                <div>Hello</div>
+            </section>
+        </div>
+    </section>
+
 
 </body>
 </html>

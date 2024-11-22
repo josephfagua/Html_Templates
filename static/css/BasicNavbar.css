@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/*
+    This CSS stylesheet was created by the Crattivo Department of Gocreattivo.
+    It is designed to style FooterStyle-2.html template with a customizable logo positioned at the center.
+    Our team specializes in Full Stack Development, Database Management, API Integration,
+    Frontend & Backend Coordination, and Code Optimization.
+    Gocreattivo is dedicated to providing high-quality, efficient, and scalable design solutions.
+*/
+
 *{
     padding:0;
     margin:0;
@@ -231,7 +239,7 @@ header.scrolled{
         display: none;
     }
 }
-@media only screen and (min-width: 601px) and (max-width: 768px){
+@media only screen and (min-width: 481px) and (max-width: 768px){
     .default-nav-links li.nav-logo{
         margin-left: 15%;
         margin-right: 0;
@@ -252,12 +260,12 @@ header.scrolled{
     .mobile-nav{
         display: none;
     }
-    .default-nav button {
+    .mobile-nav button {
         display: none;
     }
 }
 /*Mobile Devices */
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 480px){
     .default-nav{
         justify-content: flex-end;
     }
@@ -285,6 +293,13 @@ header.scrolled{
     }
     .mobile-nav {
         width: 60vw;
+    }
+    .mobile-nav__link {
+        padding: 10px 25px;
+    }
+    .mobile-nav__text {
+        font-size: 14px;
+        letter-spacing: 0.8px;
     }
 }
 
