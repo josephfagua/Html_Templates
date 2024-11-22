@@ -303,7 +303,6 @@ footer{
     }
 }
 /* Mobile Devices */
-@media only screen and (max-width: 480px){
     .default-footer-container{
         display: none;
     }

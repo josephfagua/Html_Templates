@@ -3,7 +3,7 @@ from flask import render_template, Flask,url_for
 app = Flask(__name__)
 
 
-@app.route('/basicnav')
+@app.route('/')
 def basic_navbar():
     return render_template('BasicNavbar.html')
 
