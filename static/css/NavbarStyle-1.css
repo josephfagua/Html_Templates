@@ -177,7 +177,7 @@ header.scrolled{
     }
     .default-nav ul li a{
         padding: 15px 15px;
-        font-size: 0.70vw;
+        font-size: 0.5em;
         letter-spacing: 1px;
     }
     .mobile-nav{
@@ -204,10 +204,10 @@ header.scrolled{
     }
     .default-nav ul li a{
         padding: 15px 15px;
-        font-size: 0.9vw;
+        font-size: 0.4em;
     }
     .mobile-nav{
-        display: flex;
+        display: none;
     }
     .default-nav button {
         display: none;
@@ -230,7 +230,7 @@ header.scrolled{
     }
     .default-nav ul li a{
         padding: 15px 15px;
-        font-size: 1.4vw;
+        font-size: 0.3em;
     }
     .mobile-nav{
         display: none;
@@ -239,7 +239,7 @@ header.scrolled{
         display: none;
     }
 }
-@media only screen and (min-width: 481px) and (max-width: 768px){
+@media only screen and (min-width: 601px) and (max-width: 768px){
     .default-nav-links li.nav-logo{
         margin-left: 15%;
         margin-right: 0;
@@ -255,7 +255,7 @@ header.scrolled{
     }
     .default-nav ul li a{
         padding: 10px 15px;
-        font-size: 1.4vw;
+        font-size: 0.1em;
     }
     .mobile-nav{
         display: none;
@@ -265,7 +265,7 @@ header.scrolled{
     }
 }
 /*Mobile Devices */
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 600px){
     .default-nav{
         justify-content: flex-end;
     }

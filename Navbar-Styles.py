@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def basic_navbar():
-    return render_template('BasicNavbar.html')
+    return render_template('NavbarStyle-1.html')
 
 
 if __name__ == '__main__':
