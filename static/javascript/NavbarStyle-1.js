@@ -6,16 +6,14 @@
     Gocreattivo is committed to delivering user-friendly, high-performance web solutions.
 -->
 
-// Toggles the mobile nav menu when in the mobile device responsive size to open or close
 function toggleNav() {
     document.body.classList.toggle("mobile-nav-open");
 }
-// Modifies the opacity of the navbar background to fade in and out
 document.addEventListener('scroll', () =>{
-            const header = document.querySelector('header');
-            if (window.scrollY >0){
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        })
+    const header = document.querySelector('header');
+    if (window.scrollY >0){
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+})
