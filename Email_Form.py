@@ -3,6 +3,7 @@ from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
+
 # App.config all config values listed below should be in a .env file  and accessed using os.environ.get(value)
 app.config['DEBUG'] = False
 app.config['TESTING'] = False
@@ -15,7 +16,6 @@ app.config['MAIL_PASSWORD'] = "eucwekaaafjaihxz"
 app.config['MAIL_DEFAULT_SENDER'] = ("Joseph From GoCreattivo","joseph05fagua@gmail.com") #For the email to be sent with a from for the sender it must be in a tuple that includes a small name or message followed by the actual from email
 app.config['MAIL_MAX_EMAILS'] = None # This blocks the mail system to make it stop once it reaches the max emails sent and will create a new connection and continue sending emails
 app.config['MAIL_ASCII_ATTACHMENTS'] = False
-
 mail = Mail(app)
 
 
