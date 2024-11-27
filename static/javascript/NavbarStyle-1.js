@@ -8,11 +8,15 @@
 function toggleNav() {
     document.body.classList.toggle("mobile-nav-open");
 }
+
 document.addEventListener('scroll', () =>{
     const header = document.querySelector('header');
-    if (window.scrollY >0){
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
+        const logo = document.querySelector('.default-nav li.nav-logo svg');
+        if (window.scrollY >0){
+            header.classList.add('scrolled');
+            logo.style.opacity = "1";
+        } else {
+            header.classList.remove('scrolled');
+            logo.style.opacity = "0";
+        }
 })

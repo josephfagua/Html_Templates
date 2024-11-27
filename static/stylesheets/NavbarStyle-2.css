@@ -14,26 +14,74 @@
 body{
     overflow-x: hidden;
 }
+header,
+.mobile-nav,
+.mobile-nav-links-container{
+    background: #111;
+}
+.default-nav,
+.mobile-nav__text {
+    font-family: 'Jost', sans-serif;
+}
+
 /*Base css for default-nav*/
 header{
     display: flex;
+    flex-direction: column;
     height: auto;
     width: 100%;
     top: 0;
-    position: fixed;
-    transition: background 0.8s ease-in-out, opacity 0.8s ease-in-out;
-    box-shadow: none;
+    box-shadow: 5px 5px 15px 0 rgba(31, 31, 31, 0.07);
+    position: relative;
     z-index: 10;
 }
-header.scrolled{
-    background: #222222;
-    box-shadow: 5px 5px 15px 0 rgba(31, 31, 31, 0.07);
-    opacity: 0.96;
+.default-nav-header-top{
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    width: 100%;
+}
+.default-nav-header-top-left-section,
+.default-nav-header-top-right-section{
+    ul{
+        display: inline-flex;
+        list-style: none;
+        gap: 50px;
+    }
+    li{
+        color: white;
+        font-style: normal;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 0.9em;
+        letter-spacing: 0.25px;
+        line-height: 4.5em;
+        font-weight: 600;
+        display: list-item;
+        position: relative;
+    }
+}
+.default-nav-header-top-left-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 40%;
+    margin-left: 5%;
+}
+.default-nav-header-top-right-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 60%;
+    margin-right: 4%;
+}
+.default-nav-header-top-separator{
+    border-bottom: 1px solid #201f1f;
+    height: 0.25vh;
+    margin: 0 4% 0 4% ;
 }
 .default-nav{
     display: flex;
     margin:0;
-    font-family: "Inter", sans-serif;
     font-weight: bold;
     height: auto;
     width: 100%;
@@ -73,6 +121,7 @@ header.scrolled{
     padding: 5px 25px;
     color:white;
     text-decoration: none;
+    font-weight: bold;
     text-align: center;
     font-size: 0.7vw;
 }
@@ -83,23 +132,53 @@ header.scrolled{
 .default-nav ul li ul.dropdown{
     width: 100%;
     height: auto;
-    background-color:#222222;
     position: absolute;
     z-index:10;
     display: none;
-    border: #222222;
+    background:#222222;
 }
 .default-nav ul li a:hover{
-background: rgba(70, 70, 70, 0.5);
+    background: rgba(70, 70,70, 0.25);
 }
 .default-nav ul li ul.dropdown a:hover {
-    background: rgba(70, 70, 70, 0.5);
+    background: rgba(70, 70,70, 0.25);
 }
 .default-nav ul li.nav-logo a:hover{
     background: none;
 }
 .default-nav ul li:hover ul.dropdown{
     display: block;
+}
+.default-nav-book-button{
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+    height: 44%;
+    border: 0.25px solid #212529;
+    margin: auto 3.5% auto 0;
+    padding: 0 1em 0 2em;
+    text-align: center;
+    vertical-align: center;
+    h3{
+        display: inline-block;
+        font-size: 0.9em;
+        vertical-align: center;
+        font-weight: bold;
+        color: white;
+    }
+    span{
+        display: inline-block;
+        margin: 0 0.75em 0.43em 0.75em;
+        border: none;
+        width: 1.75em;
+        height: 0.05em;
+        background: white;
+    }
+    img{
+        height: 1em;
+        width: 1em;
+    }
 }
 .mobile-nav-button {
     display: none;
@@ -122,7 +201,6 @@ background: rgba(70, 70, 70, 0.5);
     top: 0;
     left: 0;
     z-index: 10;
-    background: #222222;
     transform: translateX(100vw);
     transition: transform 0.7s ease-in-out;
     overflow: hidden;
@@ -138,12 +216,6 @@ background: rgba(70, 70, 70, 0.5);
     width: 100%;
     cursor: pointer;
 }
-.mobile-nav-close:hover {
-    background: rgba(70, 70, 70, 0.5);
-}
-.mobile-nav-links-container {
-    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.15);
-}
 .mobile-nav__link {
     display: flex;
     align-items: center;
@@ -154,13 +226,7 @@ background: rgba(70, 70, 70, 0.5);
 }
 .mobile-nav__text {
     font-size: 22px;
-    font-family: "Inter", sans-serif;
     font-weight: 500;
-}
-.mobile-nav__link:hover {
-    background: rgba(70, 70, 70, 0.5);
-    text-decoration: none !important;
-    color: white;
 }
 dl, ol, ul {
     margin-bottom: 0;
@@ -168,28 +234,73 @@ dl, ol, ul {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width:1200px) {
     .default-nav-links li.nav-logo{
-        margin-left: 20%;
+        margin-left: 7%;
         margin-right: 2vw;
     }
     .default-nav ul{
         margin-right: 15%;
     }
     .default-nav li.nav-logo img{
-        height: 10.5vh;
+        height: 7vh;
     }
     .default-nav li.nav-logo a{
-        padding: 3px 15px;
+        padding: 8px 15px;
+        margin: 0.15vh 0;
     }
     .default-nav ul li a{
-        padding: 15px 20px;
-        font-size: 0.8em;
-        letter-spacing: 0.8px;
+        padding: 15px 15px;
+        font-size: 0.85em;
+        letter-spacing: 0.2px;
     }
     .mobile-nav{
         display: none;
     }
     .default-nav button {
         display: none;
+    }
+    .default-nav-book-button{
+        height: 50%;
+        border: 0.25px solid #1B427B;
+        margin: auto 4% auto 0;
+        padding: 0.80em 1em 0.80em 2em;
+        h3{
+            font-size: 0.92em;
+        }
+        span{
+            margin: 0 0.75em 0.43em 0.75em;
+            width: 1.75em;
+            height: 0.05em;
+        }
+        img{
+            height: 1em;
+            width: 1em;
+        }
+    }
+    .default-nav-header-top-left-section,
+    .default-nav-header-top-right-section{
+    ul{
+        gap: 50px;
+        margin: 1vw 0 0 0;
+    }
+    li{
+        font-size: 0.92em;
+        letter-spacing: 0.25px;
+        line-height: 1.5em;
+        font-weight: 600;
+    }
+    }
+    .default-nav-header-top-left-section{
+        width: 40%;
+        margin-left: 5%;
+    }
+    .default-nav-header-top-right-section{
+        width: 60%;
+        margin-right: 4%;
+    }
+    .default-nav-header-top-separator{
+        border-bottom: 1px solid #201f1f;
+        height: 0.25vh;
+        margin: 0.25vh 4% 0 4%;
     }
 }
 /*Desktops and large Laptops*/
@@ -218,6 +329,30 @@ dl, ol, ul {
     .default-nav button {
         display: none;
     }
+    .default-nav-book-button{
+        height: 44%;
+        border: 0.25px solid #1B427B;
+        margin: auto 3.5% auto 0;
+        padding: 0 1em 0 2em;
+        h3{
+            font-size: 0.9em;
+        }
+        span{
+            margin: 0 0.75em 0.43em 0.75em;
+            width: 1.75em;
+            height: 0.05em;
+        }
+        img{
+            height: 1em;
+            width: 1em;
+        }
+    }
+    .default-nav-header-top{
+        display: none;
+    }
+    .default-nav-header-top-separator{
+        display: none;
+    }
 }
 /* small and medium laptops*/
 @media only screen and (min-width: 769px) and (max-width: 992px){
@@ -235,14 +370,37 @@ dl, ol, ul {
         padding: 3px 15px;
     }
     .default-nav ul li a{
-        padding: 15px 10px;
-        font-size: 0.7em;
-        letter-spacing: 0.6px;
+        display: none;
+
     }
     .mobile-nav{
         display: none;
     }
     .default-nav button {
+        display: none;
+    }
+    .default-nav-book-button{
+        height: 44%;
+        border: 0.25px solid #1B427B;
+        margin: auto 3.5% auto 0;
+        padding: 0 1em 0 2em;
+        h3{
+            font-size: 0.9em;
+        }
+        span{
+            margin: 0 0.75em 0.43em 0.75em;
+            width: 1.75em;
+            height: 0.05em;
+        }
+        img{
+            height: 1em;
+            width: 1em;
+        }
+    }
+    .default-nav-header-top{
+        display: none;
+    }
+    .default-nav-header-top-separator{
         display: none;
     }
 }
@@ -266,6 +424,30 @@ dl, ol, ul {
     }
     .default-nav li.nav-logo img{
         height: 7vh;
+    }
+    .default-nav-book-button{
+        height: 50%;
+        border: 0.25px solid #1B427B;
+        margin: auto 4% auto 0;
+        padding: 0.80em 1em 0.80em 2em;
+        h3{
+            font-size: 0.92em;
+        }
+        span{
+            margin: 0 0.75em 0.43em 0.75em;
+            width: 1.75em;
+            height: 0.05em;
+        }
+        img{
+            height: 1em;
+            width: 1em;
+        }
+    }
+    .default-nav-header-top{
+        display: none;
+    }
+    .default-nav-header-top-separator{
+        display: none;
     }
     .mobile-nav-close {
         height: 8vh;
@@ -297,22 +479,31 @@ dl, ol, ul {
         display: none;
     }
     .default-nav-links li.nav-logo{
-        margin-left: 20%;
+        margin-left:0;
     }
     .default-nav li.nav-logo a{
-        padding: 5px 10px;
+        padding: 15px 10px;
     }
     .default-nav li.nav-logo img{
-        height: 7vh;
-    }
-    .mobile-nav-close {
         height: 8vh;
     }
+    .default-nav-book-button{
+        display: none;
+    }
+    .default-nav-header-top{
+        display: none;
+    }
+    .default-nav-header-top-separator{
+        display: none;
+    }
+    .mobile-nav-close {
+        height: 11vh;
+    }
     .mobile-nav-open .mobile-nav {
-        transform: translateX(40vw);
+        transform: translateX(15vw);
     }
     .mobile-nav {
-        width: 60vw;
+        width: 85vw;
     }
     .mobile-nav__link {
         padding: 15px 25px;
@@ -321,5 +512,6 @@ dl, ol, ul {
         font-size: 1.5em;
         letter-spacing: 0.8px;
     }
+
 }
 
