@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Styles</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='stylesheets/Testing.css') }}">
+</head>
+<body>
+    <div id="top"></div>
+    {% if value == 1 %}
+        {% include 'NavbarStyle-1.html' %}
+    {% elif value == 2 %}
+        {% include 'NavbarStyle-2.html' %}
+    {% endif %}
+</body>
+    {% if value == 1 %}
+        <script src="{{  url_for('static',filename='javascript/NavbarStyle-1.js')}}?v=1.0 "></script>
+    {% elif value == 2 %}
+        <script src="{{  url_for('static',filename='javascript/NavbarStyle-2.js')}}?v=1.0 "></script>
+    {% endif %}
+
+
+</html>

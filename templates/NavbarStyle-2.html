@@ -2,7 +2,7 @@
     This code was developed by the Crattivo Department of Gocreattivo.
     This html template is a responsive navbar designed to provide easy access to key sections of a website.
     The navbar is customizable and adaptable to different layouts and screen sizes.
-    Our team specializes in Full Stack Development, Database Management, API Integration, 
+    Our team specializes in Full Stack Development, Database Management, API Integration,
     Frontend & Backend Coordination, and Code Optimization.
     Gocreattivo is committed to delivering user-friendly, high-performance web solutions.
 -->
@@ -14,73 +14,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='stylesheets/NavbarStyle-1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='stylesheets/NavbarStyle-2.css') }}">
 </head>
 <body>
     <header>
+        <div class="default-nav-header-top">
+            <div class="default-nav-header-top-left-section">
+                <ul>
+                    <li>Mon-Thu: 4 PM - 10 PM</li>
+                    <li>Fri-Sat: 11 AM - 12 AM</li>
+                    <li>Sun: 11 AM - 10 PM</li>
+                </ul>
+            </div>
+            <div class="default-nav-header-top-right-section">
+                <ul>
+                    <li>mainmexico123@gmail.com</li>
+                    <li>(704) 889-1236</li>
+                    <li>123 Main St, Pineville, NC 28134</li>
+                </ul>
+            </div>
+        </div>
+        <div class="default-nav-header-top-separator"></div>
         <nav class="default-nav" aria-label="default-nav-bar">
             <ul class="default-nav-links">
                 <li class="nav-logo">
                     <a href="">
-                        <img src="{{ url_for('static',filename='example_logo/LOGO-MSC-167666.png') }}" alt="nav_Logo">
+                        <img src="{{ url_for('static',filename='example_logo/123-MAIN-MEXICO-logo-transparente.png') }}" alt="nav_Logo">
                     </a>
                 </li>
                 <li class="link"><a href="">HOME</a></li>
-                <li>
-                    <a href="">ABOUT &#9662;</a>
-                    <ul class="dropdown" >
-                        <li><a href="">Company Statistics</a></li>
-                    </ul>
-                </li>
+                <li><a href="">MENU</a></li>
                 <li class="link">
-                    <a href="">SERVICES &#9662;</a>
+                    <a href="">RESTAURANT &#9662;</a>
                     <ul class="dropdown" >
-                        <li><a href="">Item</a></li>
-                        <li><a href="">Item</a></li>
                         <li><a href="">Item</a></li>
                         <li><a href="">Item</a></li>
                     </ul>
                 </li>
-                <li class="link">
-                    <a href="">PROJECTS &#9662;</a>
-                    <ul class="dropdown" >
-                        <li><a href="">Item</a></li>
-                    </ul>
-                </li>
+                <li class="link"><a href="">BLOG</a></li>
                 <li class="link"><a href="">CONTACT</a></li>
             </ul>
+            <span class="default-nav-book-button">
+                <h3>BOOK A TABLE</h3>
+                <span class="default-nav-book-button-line"></span>
+                <img src="https://html.rrdevs.net/delish/assets/imgs/icon/arrow-right.svg" alt="">
+            </span>
+
             <button class="mobile-nav-button" onclick="toggleNav()"><ion-icon name="menu-outline" size="large"></ion-icon></button>
         </nav>
         <nav class="mobile-nav" aria-label="mobile-nav-bar">
+            <span class="default-nav-book-button">
+                <h3>BOOK A TABLE</h3>
+                <span class="default-nav-book-button-line"></span>
+                <img src="https://html.rrdevs.net/delish/assets/imgs/icon/arrow-right.svg" alt="">
+            </span>
             <button type="button" class="mobile-nav-close" onclick="toggleNav()">
-                <ion-icon name="close-outline" size="small"></ion-icon>
+                <ion-icon name="close-outline" size="large"></ion-icon>
             </button>
             <div class="mobile-nav-links-container">
                 <a href="#" class="mobile-nav__link">
-                    <span class="mobile-nav__text">HOME</span>
-                    <ion-icon name="cube-outline" size="small"></ion-icon>
+                    <span class="mobile-nav__text">Home</span>
                 </a>
                 <a href="#" class="mobile-nav__link">
-                    <span class="mobile-nav__text">ABOUT</span>
-                    <ion-icon name="location-outline" size="small"></ion-icon>
+                    <span class="mobile-nav__text">About Us</span>
                 </a>
                 <a href="#" class="mobile-nav__link">
-                    <span class="mobile-nav__text">SERVICES</span>
-                    <ion-icon name="settings-outline" size="small"></ion-icon>
+                    <span class="mobile-nav__text">Services</span>
                 </a>
                 <a href="#" class="mobile-nav__link">
-                    <span class="mobile-nav__text">PROJECTS</span>
-                    <ion-icon name="call-outline" size="small"></ion-icon>
+                    <span class="mobile-nav__text">Projects</span>
                 </a>
                 <a href="#" class="mobile-nav__link">
-                    <span class="mobile-nav__text">CONTACT</span>
-                    <ion-icon name="call-outline" size="small"></ion-icon>
+                    <span class="mobile-nav__text">Contact</span>
                 </a>
             </div>
         </nav>
     </header>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{{  url_for('static',filename='javascript/NavbarStyle-1.js',v=1.0) }}"></script>
 </body>
 
 </html>
